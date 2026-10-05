@@ -1,0 +1,10 @@
+.DS_Store
+__pycache__/
+*.pyc
+dist/
+.verification/
+.env
+.env.*
+*.pem
+*.key
+node_modules/
