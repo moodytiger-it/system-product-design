@@ -2,7 +2,7 @@
 
 让 AI 把业务需求做成新人能上手、熟手能持续工作的系统：对象有状态，任务有工作台，流程有结果，电脑和手机分别设计交互。
 
-**版本：1.3.1 · 许可证：MIT · 支持：Claude Code / Codex**
+**版本：1.4.0 · 许可证：MIT · 支持：Claude Code / Codex**
 
 这是一个可独立安装的 Agent Skill，由 moodytiger 开源。适用于多模块业务系统、内部工具的新建或结构改造，也可以只用来做产品设计。公开版保留完整设计方法，去除了个人路径、内部链接和真实项目材料。
 
@@ -52,6 +52,8 @@ python3 scripts/install.py --target both
 5. 与请求一致的设计、可操作原型或真实系统。
 6. 按模块的验收证据、接入边界和待完成项；真实运行时附恢复与接手材料。
 
+v1.4 补充五项体验验收：参照图逐项对应实现与证据；按各角色产品内教程原路径完成任务；按明确场景交付真实手机预览；账号预览默认服务端只读并隔离跨标签身份；检查常用宽高下的入口可达，并保留能识别缺陷的失败案例。布局和预览按业务选择，不强制手机外框、iframe、三栏或固定导航数量。
+
 适用于门店巡检、资料补件、内容工作台、业务协作等有操作闭环的系统。纯只读 BI、报告、落地页、小文案样式修改或后台接口修复不强制套用整套流程。
 
 本规范保留**飞书账号登录**的组织默认：真实系统不用共享密码、Basic Auth 或模拟身份代替正式登录。外部组织如要适配其他身份平台，应在自己的项目规范中明确调整，而不是由 AI 擅自切换。
@@ -68,8 +70,9 @@ skills/system-product-design/
 │   ├── task-spec.md               # 关键任务卡与模块覆盖表
 │   ├── onboarding.md              # 入门与持续帮助
 │   ├── system-readiness.md        # 完整性与运行条件
-│   └── acceptance-checklist.md    # 验收清单
-└── evals/evals.json               # 8 个虚构评测场景
+│   ├── acceptance-checklist.md    # 验收清单
+│   └── experience-review.md       # 体验走查与失败案例
+└── evals/evals.json               # 11 个虚构评测场景（原8个 + 新增3个）
 ```
 
 相邻工作流、品牌或平台 skills 都是可选衔接，不是安装前置条件。本包不包含公司数据、账号凭据、后台服务或其他未公开 skills。调用外部系统时沿用项目的真实权限与可用工具。
@@ -78,7 +81,7 @@ skills/system-product-design/
 
 ## 下载、更新与维护
 
-固定版本下载见 [Releases](https://github.com/moodytiger-it/system-product-design/releases)。`system-product-design-v1.3.1.tgz` 包含完整 skill 和许可证，`SHA256SUMS` 用于校验；解压后可将顶层 `system-product-design` 文件夹放到上述对应的 skills 目录。
+固定版本下载见 [v1.4.0 Release](https://github.com/moodytiger-it/system-product-design/releases/tag/v1.4.0)。`system-product-design-v1.4.0.tgz` 包含完整 skill 和许可证，`SHA256SUMS` 用于校验；解压后可将顶层 `system-product-design` 文件夹放到上述对应的 skills 目录。
 
 从仓库更新时先 `git pull --ff-only`，再运行安装器；有差异时按提示决定是否 `--replace`。
 
